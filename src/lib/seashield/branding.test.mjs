@@ -26,20 +26,17 @@ const FORMER_NAME = /sea\s*shield|marisentry/i;
 const routeFiles = readdirSync(`${root}src/routes`).filter((f) => f.endsWith(".tsx"));
 
 test("every route's head metadata names CargoHaven and never the former name", async () => {
-  let titled = 0;
+  // __root.tsx sets shared metadata only; every other route module is a page that must set its own title.
+  const pages = routeFiles.filter((f) => f !== "__root.tsx");
+  assert.ok(pages.length >= 13, `route modules found: ${routeFiles.join(", ")}`);
   for (const file of routeFiles) {
     const { Route } = await vite.ssrLoadModule(`/src/routes/${file}`);
     const head = Route.options.head?.({});
-    if (!head) continue;
-    const text = JSON.stringify(head);
-    assert.doesNotMatch(text, FORMER_NAME, file);
-    const title = head.meta?.find((m) => m.title)?.title;
-    if (title) {
-      assert.match(title, /CargoHaven/, file);
-      titled += 1;
-    }
+    assert.doesNotMatch(JSON.stringify(head ?? {}), FORMER_NAME, file);
+    if (file === "__root.tsx") continue;
+    const title = head?.meta?.find((m) => m.title)?.title;
+    assert.match(title ?? "", /CargoHaven/, `${file} must set a page title that names CargoHaven`);
   }
-  assert.ok(titled >= 13, `${titled} titled routes`);
 });
 
 test("the app header and sign-in screen show the CargoHaven wordmark", async () => {
