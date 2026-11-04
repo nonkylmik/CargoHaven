@@ -22,13 +22,13 @@ const AVERAGE_TONE: Record<
 export const Route = createFileRoute("/reports")({
   head: () => ({
     meta: [
-      { title: "Security Reporting — SeaShield" },
+      { title: "Security Reporting — CargoHaven" },
       {
         name: "description",
         content:
-          "SeaShield reporting view: security events by category, incident breakdown, camera and sensor uptime, access violations and per-vessel security score (simulated).",
+          "CargoHaven reporting view: security events by category, incident breakdown, camera and sensor uptime, access violations and per-vessel security score (simulated).",
       },
-      { property: "og:title", content: "Security Reporting — SeaShield" },
+      { property: "og:title", content: "Security Reporting — CargoHaven" },
       {
         property: "og:description",
         content:

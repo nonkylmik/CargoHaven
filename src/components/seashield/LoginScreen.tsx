@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from "react";
-import { Anchor, LockKeyhole } from "lucide-react";
+import { LockKeyhole } from "lucide-react";
+import { BrandLockup } from "./BrandMark";
 
 export function LoginScreen({
   onLogin,
@@ -28,10 +29,7 @@ export function LoginScreen({
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="w-full max-w-sm border border-border bg-panel shadow-panel">
         <header className="border-b border-border bg-panel-header px-5 py-4">
-          <div className="flex items-center gap-2 text-signal">
-            <Anchor className="size-5" />
-            <span className="font-mono text-sm font-semibold tracking-[0.16em]">SEASHIELD</span>
-          </div>
+          <BrandLockup subtitle="Maritime Security Operations" />
           <h1 className="mt-4 text-lg font-semibold">Operator sign-in</h1>
           <p className="mt-1 text-xs text-muted-foreground">
             Authenticated access is required for this console.

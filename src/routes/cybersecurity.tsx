@@ -16,13 +16,13 @@ import type { CyberFinding } from "@/lib/seashield/types";
 export const Route = createFileRoute("/cybersecurity")({
   head: () => ({
     meta: [
-      { title: "Cybersecurity Monitoring — SeaShield" },
+      { title: "Cybersecurity Monitoring — CargoHaven" },
       {
         name: "description",
         content:
-          "Simulated vessel network monitoring in SeaShield: unknown devices, failed authentication, suspicious traffic, firewall blocks and network anomalies.",
+          "Simulated vessel network monitoring in CargoHaven: unknown devices, failed authentication, suspicious traffic, firewall blocks and network anomalies.",
       },
-      { property: "og:title", content: "Cybersecurity Monitoring — SeaShield" },
+      { property: "og:title", content: "Cybersecurity Monitoring — CargoHaven" },
       {
         property: "og:description",
         content:

@@ -1,6 +1,6 @@
 """Checks that let migrations 0001-0003 adopt tables created by application startup before Alembic ran.
 
-Older SeaShield versions told users to start the backend directly, and the backend's startup creates every
+Older versions, released as SeaShield, told users to start the backend directly, and the backend's startup creates every
 missing table with `Base.metadata.create_all`. Those tables have the same definition the migrations create, so
 the migrations adopt them instead of failing. Adoption only verifies existing tables and adds missing indexes;
 it never drops, renames, retypes or rewrites anything.
@@ -106,6 +106,6 @@ def verify_existing_tables(expected_tables: Iterable[ExpectedTable]) -> set[str]
             "Existing tables are not compatible with this migration, so this migration made no changes: "
             + " | ".join(report)
             + ". Earlier migrations in this upgrade, if any, remain applied (see the recorded Alembic version). "
-            "These tables were not created by a known SeaShield version; restore a backup or investigate before upgrading."
+            "These tables were not created by a known CargoHaven or SeaShield version; restore a backup or investigate before upgrading."
         )
     return adopted

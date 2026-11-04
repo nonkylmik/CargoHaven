@@ -64,7 +64,7 @@ test("failure descriptions name the action and the backend's reason", () => {
   );
   assert.deepEqual(describeWriteFailure("Add note", new ApiRequestError(500, null)), {
     title: "Add note failed",
-    description: "SeaShield API request failed (500). The change was not saved.",
+    description: "CargoHaven API request failed (500). The change was not saved.",
   });
   assert.equal(
     describeWriteFailure("Acknowledge event", new TypeError("Failed to fetch")).description,

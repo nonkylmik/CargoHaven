@@ -9,13 +9,13 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/access-control")({
   head: () => ({
     meta: [
-      { title: "Access Control — SeaShield" },
+      { title: "Access Control — CargoHaven" },
       {
         name: "description",
         content:
-          "Simulated vessel access control log in SeaShield: authorized, denied and suspicious credential events across restricted shipboard areas.",
+          "Simulated vessel access control log in CargoHaven: authorized, denied and suspicious credential events across restricted shipboard areas.",
       },
-      { property: "og:title", content: "Access Control — SeaShield" },
+      { property: "og:title", content: "Access Control — CargoHaven" },
       {
         property: "og:description",
         content: "Authorized, denied and suspicious access events for restricted vessel areas.",

@@ -16,13 +16,13 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/fleet")({
   head: () => ({
     meta: [
-      { title: "Fleet Monitoring — SeaShield" },
+      { title: "Fleet Monitoring — CargoHaven" },
       {
         name: "description",
         content:
-          "Fleet monitoring grid for SeaShield: security status, camera and cyber posture, active incidents and last communication per cargo vessel (simulated).",
+          "Fleet monitoring grid for CargoHaven: security status, camera and cyber posture, active incidents and last communication per cargo vessel (simulated).",
       },
-      { property: "og:title", content: "Fleet Monitoring — SeaShield" },
+      { property: "og:title", content: "Fleet Monitoring — CargoHaven" },
       {
         property: "og:description",
         content: "Per-vessel security, CCTV and cyber posture across the monitored cargo fleet.",

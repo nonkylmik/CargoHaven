@@ -75,7 +75,7 @@ class RequireSessionMiddleware(BaseHTTPMiddleware):
         return await call_next(request)
 
 
-app = FastAPI(title="SeaShield Security API", version=APP_VERSION, description="Simulation-only maritime security backend.")
+app = FastAPI(title="CargoHaven Security API", version=APP_VERSION, description="Simulation-only maritime security backend.")
 app.add_middleware(RequireSessionMiddleware)
 app.add_middleware(CORSMiddleware, allow_origin_regex=r"https?://(localhost|127\.0\.0\.1):\d+", allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
 app.state.websocket_manager = ConnectionManager()
@@ -280,7 +280,7 @@ def seed_safety_demo_data(db: Session) -> None:
             round_type=round_data["round_type"],
             assigned_to=round_data["assigned_to"],
             planned_start=datetime.now(timezone.utc),
-            notes="Deterministic SeaShield demonstration record.",
+            notes="Deterministic CargoHaven demonstration record.",
             template_name=round_data["round_type"],
             commit=False,
         )

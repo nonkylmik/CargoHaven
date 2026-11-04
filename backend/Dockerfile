@@ -1,4 +1,4 @@
-# Development image for the SeaShield backend. See "Docker (development)" in backend/README.md.
+# Development image for the CargoHaven backend. See "Docker (development)" in backend/README.md.
 FROM python:3.12-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1 \

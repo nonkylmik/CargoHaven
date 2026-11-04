@@ -6,13 +6,13 @@ import { PageHeader, Panel, SimBanner, StatusDot } from "@/components/seashield/
 export const Route = createFileRoute("/settings")({
   head: () => ({
     meta: [
-      { title: "Settings — SeaShield Console" },
+      { title: "Settings — CargoHaven Console" },
       {
         name: "description",
         content:
-          "SeaShield workstation settings: operator profile, edge and backend connection targets, simulation mode and data source configuration for Prototype V1.",
+          "CargoHaven workstation settings: operator profile, edge and backend connection targets, simulation mode and data source configuration for Prototype V1.",
       },
-      { property: "og:title", content: "Settings — SeaShield Console" },
+      { property: "og:title", content: "Settings — CargoHaven Console" },
       {
         property: "og:description",
         content: "Operator profile, connection targets and simulation configuration.",

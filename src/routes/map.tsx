@@ -50,13 +50,13 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/map")({
   head: () => ({
     meta: [
-      { title: "Tactical Map — SeaShield" },
+      { title: "Tactical Map — CargoHaven" },
       {
         name: "description",
         content:
-          "Simulated fleet overview for SeaShield: backend-owned simulated vessel positions with security status and position freshness. Not real AIS data and not a navigational chart.",
+          "Simulated fleet overview for CargoHaven: backend-owned simulated vessel positions with security status and position freshness. Not real AIS data and not a navigational chart.",
       },
-      { property: "og:title", content: "Tactical Map — SeaShield" },
+      { property: "og:title", content: "Tactical Map — CargoHaven" },
     ],
   }),
   component: MapView,

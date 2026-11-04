@@ -8,10 +8,17 @@
       content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'"
     />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <title>SeaShield — Maritime intelligence and operational security</title>
+    <title>CargoHaven — Maritime Security Operations, Unified</title>
     <meta
       name="description"
-      content="SeaShield is an early-stage, vessel-centric prototype for maritime awareness and security operations. Prototype map positions are simulated. Maritime organisations can request an early-access demo."
+      content="CargoHaven is a maritime security operations platform for shipping companies and fleet operators, designed to connect vessel monitoring, physical security, cybersecurity and operational intelligence. The working prototype runs on simulated data. Maritime organisations can request an early-access demo."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="CargoHaven" />
+    <meta property="og:title" content="CargoHaven — Maritime Security Operations, Unified" />
+    <meta
+      property="og:description"
+      content="Connect vessel monitoring, physical security, cybersecurity and operational intelligence through one unified maritime security platform. Early access: the prototype runs on simulated data."
     />
     <meta name="theme-color" content="#0B1726" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
@@ -23,24 +30,28 @@
 
     <header class="site-header">
       <nav class="container nav" aria-label="Main">
-        <a class="brand" href="#top" aria-label="SeaShield, back to top">
+        <a class="brand" href="#top" aria-label="CargoHaven, back to top">
           <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
             <path
-              d="M16 3 5 7v8.2c0 6.6 4.6 11.6 11 13.8 6.4-2.2 11-7.2 11-13.8V7L16 3Z"
+              d="M6.91 11.25A10.5 10.5 0 1 0 14.18 6.16"
               fill="none"
               stroke="#72D5F4"
               stroke-width="2"
-              stroke-linejoin="round"
+              stroke-linecap="round"
             />
+            <circle cx="6.91" cy="11.25" r="1.6" fill="#4CC3B5" />
+            <circle cx="14.18" cy="6.16" r="1.6" fill="#4CC3B5" />
+            <path d="M10.5 17.25h11l-2 3.3h-7Z" fill="#E7EDF0" />
+            <path d="M17.4 13.9h2.6v3.35h-2.6Z" fill="#E7EDF0" />
             <path
-              d="M9.5 17.5c2.2-1.6 4.3-1.6 6.5 0s4.3 1.6 6.5 0"
-              fill="none"
-              stroke="#E7EDF0"
-              stroke-width="2"
+              d="M10 22.9h12"
+              stroke="#72D5F4"
+              stroke-opacity="0.6"
+              stroke-width="1.5"
               stroke-linecap="round"
             />
           </svg>
-          SeaShield
+          CargoHaven
         </a>
         <button
           class="nav-toggle"
@@ -67,13 +78,13 @@
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="container">
           <div class="hero-copy">
-            <p class="eyebrow">Maritime intelligence &amp; operational security</p>
-            <h1 id="hero-title">
-              See your fleet. Understand the situation. Respond with confidence.
-            </h1>
+            <p class="eyebrow">CargoHaven</p>
+            <h1 id="hero-title">Maritime Security Operations, Unified.</h1>
             <p class="lead">
-              A vessel-centric approach to maritime awareness and security operations, designed to
-              bring fleet information and operational context into one place.
+              Connect vessel monitoring, physical security, cybersecurity and operational
+              intelligence through one unified maritime security platform. CargoHaven is in early
+              access: today's working prototype runs on simulated data, and integrations with
+              onboard systems are planned, not yet built.
             </p>
             <div class="hero-actions">
               <a class="button button-primary" href="#early-access">Request an early-access demo</a>
@@ -90,7 +101,7 @@
                 width="1600"
                 height="1000"
                 fetchpriority="high"
-                alt="The SeaShield prototype's tactical map: a world map with six fictional demo vessels, a vessel list with security status and position freshness, and the selected vessel's context panel."
+                alt="The CargoHaven prototype's tactical map: a world map with six fictional demo vessels, a vessel list with security status and position freshness, and the selected vessel's context panel."
               />
             </div>
             <figcaption>
@@ -98,7 +109,7 @@
                 >Prototype preview — vessel positions and operational data may be simulated.</span
               >
               <span
-                >Screenshot of the SeaShield prototype's tactical map. The vessels, positions and
+                >Screenshot of the CargoHaven prototype's tactical map. The vessels, positions and
                 routes are fictional demo data, not real AIS or vessel movements.</span
               >
             </figcaption>
@@ -115,7 +126,7 @@
             </h2>
             <p class="lead">
               Understanding what is happening on a vessel can mean piecing together information that
-              lives in different places. SeaShield is being built to address that.
+              lives in different places. CargoHaven is being built to bring it together.
             </p>
           </div>
           <div class="cards">
@@ -150,7 +161,7 @@
             <p class="eyebrow">The approach</p>
             <h2 id="platform-title">One vessel-centric operational view.</h2>
             <p class="lead">
-              SeaShield organises information around each vessel, so an operator can move from the
+              CargoHaven organises information around each vessel, so an operator can move from the
               fleet overview to a single vessel's situation without changing tools.
             </p>
           </div>
@@ -338,7 +349,7 @@
             </h2>
             <p class="lead">
               We are speaking with maritime professionals to understand their operational challenges
-              and invite suitable organisations to explore and test the SeaShield prototype.
+              and invite suitable organisations to explore and test the CargoHaven prototype.
             </p>
           </div>
 
@@ -468,13 +479,24 @@
           </div>
           <div class="faq">
             <details>
-              <summary>What is SeaShield?</summary>
+              <summary>What is CargoHaven?</summary>
               <div>
                 <p>
-                  SeaShield is an early-stage maritime awareness and security operations product. It
-                  is currently a working prototype that brings vessel position context, security
-                  status and incidents into one vessel-centric view. It is not a live monitoring
-                  service.
+                  CargoHaven is a maritime security operations platform for shipping companies and
+                  vessel operators. It is designed to connect vessel monitoring, physical security,
+                  cybersecurity and operational intelligence in one place. Today it is a working
+                  prototype that brings vessel position context, security status and incidents into
+                  a vessel-centric view, using simulated data. It is not a live monitoring service.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>Is CargoHaven a cargo or logistics platform?</summary>
+              <div>
+                <p>
+                  No. CargoHaven does not manage cargo, freight or logistics. It is a maritime
+                  security operations platform for the people responsible for the security of
+                  vessels, their crews and the cargo they carry.
                 </p>
               </div>
             </details>
@@ -531,7 +553,7 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <p>SeaShield (working product name) · Maritime intelligence and operational security</p>
+          <p>CargoHaven — Maritime Security Operations, Unified.</p>
           <p>
             Contact:
             <span class="placeholder" data-placeholder="contact-email"

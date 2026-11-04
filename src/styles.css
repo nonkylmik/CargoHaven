@@ -190,7 +190,7 @@
 }
 
 /*
- * SeaShield design system — maritime security operations console.
+ * CargoHaven design system — maritime security operations console.
  * Dark-only, navy/charcoal foundation with cyan/blue signal accents.
  * All colors are oklch semantic tokens. Never hardcode colors in components.
  */
@@ -244,6 +244,7 @@
   --color-offline: var(--offline);
   --color-signal: var(--signal);
   --color-signal-foreground: var(--signal-foreground);
+  --color-brand-teal: var(--brand-teal);
 
   --color-chart-1: var(--signal);
   --color-chart-2: var(--secure);
@@ -308,6 +309,9 @@
   --critical: oklch(0.62 0.21 20);
   --critical-foreground: oklch(0.97 0.01 240);
   --offline: oklch(0.48 0.02 250);
+
+  /* brand accent, used by the CargoHaven mark; not a status colour */
+  --brand-teal: oklch(0.75 0.1 182);
 
   --sidebar: oklch(0.196 0.027 252);
   --sidebar-foreground: oklch(0.82 0.014 244);

@@ -2,11 +2,12 @@ import os
 from collections.abc import Generator
 from pathlib import Path
 
-from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import DeclarativeBase, Session, sessionmaker
 
-load_dotenv(Path(__file__).resolve().parents[2] / ".env")
+from root_env import load_root_env
+
+load_root_env()
 DEFAULT_SQLITE_URL = f"sqlite:///{Path(__file__).resolve().parents[1] / 'seashield.db'}"
 DATABASE_URL = os.getenv("DATABASE_URL", DEFAULT_SQLITE_URL)
 

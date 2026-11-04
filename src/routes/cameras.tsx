@@ -9,13 +9,13 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/cameras")({
   head: () => ({
     meta: [
-      { title: "CCTV Wall — SeaShield" },
+      { title: "CCTV Wall — CargoHaven" },
       {
         name: "description",
         content:
-          "SeaShield CCTV monitoring wall with simulated placeholder feeds for bridge, deck, cargo, engine room, port, starboard, stern and entrance cameras.",
+          "CargoHaven CCTV monitoring wall with simulated placeholder feeds for bridge, deck, cargo, engine room, port, starboard, stern and entrance cameras.",
       },
-      { property: "og:title", content: "CCTV Wall — SeaShield" },
+      { property: "og:title", content: "CCTV Wall — CargoHaven" },
       {
         property: "og:description",
         content: "Multi-panel simulated camera wall with per-zone status and uptime.",

@@ -1,4 +1,4 @@
-# Development only: runs the SeaShield backend in Docker. The frontend still runs on the host
+# Development only: runs the CargoHaven backend in Docker. The frontend still runs on the host
 # (npm run dev). See "Docker (development)" in backend/README.md.
 services:
   backend:

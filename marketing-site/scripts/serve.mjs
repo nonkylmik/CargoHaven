@@ -57,6 +57,6 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
     if (req.method === "HEAD") res.end();
     else createReadStream(file).pipe(res);
   }).listen(PORT, "127.0.0.1", () => {
-    console.log(`SeaShield marketing site: http://127.0.0.1:${PORT}/`);
+    console.log(`CargoHaven marketing site: http://127.0.0.1:${PORT}/`);
   });
 }
