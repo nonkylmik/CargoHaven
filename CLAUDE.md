@@ -1,13 +1,16 @@
-# SeaShield — Claude Code guide
+# CargoHaven — Claude Code guide
 
 @AGENTS.md
 
-Simulation-only maritime security platform: FastAPI backend + TanStack Start/React frontend (built partly in Lovable). Nothing connects to real vessels, cameras, networks or sensors; keep it that way unless explicitly asked.
+CargoHaven: a simulation-only maritime security operations platform. FastAPI backend + TanStack Start/React frontend (originally built partly in Lovable; no Lovable tooling remains). Nothing connects to real vessels, cameras, networks or sensors; keep it that way unless explicitly asked.
+
+Repository: `https://github.com/nonkylmik/CargoHaven`. The product and repository were renamed from SeaShield (formerly `nonkylmik/SeaShield-V1.8-V2`, which GitHub redirects); a local clone may still sit in a folder with the old name. Use "CargoHaven" in all user-visible text. Identifiers that still say `seashield` (source folders, `seashield.db`, the `seashield_session` cookie, the `seashield-data` volume, demo login defaults, code names like `useSeaShield`) are kept for compatibility; don't rename them without approval.
 
 ## Architecture
 
 - `backend/app/main.py` — FastAPI app: all HTTP routes, `/ws/security` WebSocket, startup (create tables, seed demo safety rounds, sync engine).
 - `backend/auth.py` — single demo user, HMAC-signed session cookie, `AUTH_REQUIRED` toggle (default off).
+- `backend/root_env.py` — `load_root_env()` loads the repository-root `.env` (shell variables take precedence). Every module that reads settings at import time must call it first: `app/main.py` imports `auth` before `db.database`, so relying on `database.py` to load `.env` once made `SESSION_SECRET`/`DEMO_USER_*` from `.env` silently ignored. `tests/test_root_env.py` guards this; `tests/conftest.py` keeps the suite from reading a developer's `.env`.
 - `backend/websocket_manager.py` — in-memory broadcast to all clients.
 - `backend/db/` — SQLAlchemy 2 (`database.py`, `models.py`), repositories in `db/repositories/`. `DATABASE_URL` from env or root `.env`; falls back to SQLite `backend/seashield.db`.
 - `backend/alembic/` — migrations (`versions/YYYYMMDD_NNNN_*.py`).
@@ -35,7 +38,7 @@ Frontend — run from repo root with **npm**; `package-lock.json` is the only lo
 - `npx tsc --noEmit` — type-check.
 - `npm run lint` — ESLint (`**/*.{ts,tsx}` plus JS config files) with Prettier as the `prettier/prettier` rule. Don't run `npm run format` unless asked; it rewrites many files.
 
-`tsc` and `lint` currently have pre-existing failures. Compare against the baseline before and after a change; only new failures count as regressions.
+Baseline as of 2026-11-04: `tsc` reports no errors; lint (with the line-ending override below) reports 0 errors and 13 pre-existing warnings. Compare against the baseline before and after a change; only new failures count as regressions.
 
 Line endings: the repo stores LF, but a system-level `core.autocrlf=true` checks files out as CRLF, so `npm run lint` reports `Delete ␍` on nearly every line. That's checkout noise, not a code problem. For a meaningful baseline without changing files or config, run (works in bash and PowerShell):
 `npx eslint . --rule "prettier/prettier: [error, {endOfLine: auto}]"`
@@ -69,7 +72,7 @@ Many routes exist under both a legacy unversioned path (e.g. `/vessels`, `/simul
 
 ## Git
 
-- Never commit to `main`; work on feature branches (e.g. `feature/seashield-v3-*`).
+- Never commit to `main`; work on feature branches named `feature/cargohaven-*` (e.g. `feature/cargohaven-v4-rebrand`). Branches created before the rename keep their `feature/seashield-v3-*` / `feature/seashield-v4-*` names; don't rename pushed branches.
 - Never force-push, rewrite pushed history, or reset shared branches.
 - Check `git status` and whether the branch is behind `origin` before switching branches; stop and report uncommitted work or divergence.
 - Commit or push only with the user's explicit approval.

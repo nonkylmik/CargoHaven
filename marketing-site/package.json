@@ -1,7 +1,7 @@
 {
-  "name": "seashield-marketing-site",
+  "name": "cargohaven-marketing-site",
   "private": true,
-  "description": "Standalone SeaShield marketing landing page: static HTML, CSS and vanilla JS, no dependencies.",
+  "description": "Standalone CargoHaven marketing landing page: static HTML, CSS and vanilla JS, no dependencies.",
   "type": "module",
   "scripts": {
     "serve": "node scripts/serve.mjs",

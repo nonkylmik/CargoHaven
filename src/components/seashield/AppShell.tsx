@@ -12,7 +12,6 @@ import {
   LayoutDashboard,
   LogOut,
   Map as MapIcon,
-  Radar,
   Search,
   Settings,
   Ship,
@@ -31,6 +30,7 @@ import {
   logoutBackend,
   readBackendAuth,
 } from "@/lib/seashield/backend";
+import { BrandLockup } from "./BrandMark";
 import { LoginScreen } from "./LoginScreen";
 
 type AuthState = { required: boolean; authenticated: boolean };
@@ -150,14 +150,8 @@ function TopBar({ onSignOut }: { onSignOut?: (() => Promise<void>) | undefined }
 
   return (
     <header className="flex h-12 shrink-0 items-center gap-3 border-b border-border bg-panel-header px-3">
-      <div className="flex items-center gap-2 pr-3">
-        <div className="relative flex size-7 items-center justify-center rounded-sm bg-signal/15 ring-1 ring-signal/40">
-          <Radar className="size-4 text-signal" />
-        </div>
-        <div className="leading-none">
-          <div className="text-sm font-semibold tracking-[0.18em]">SEASHIELD</div>
-          <div className="label-mono text-[9px]">Maritime Security Ops</div>
-        </div>
+      <div className="pr-3">
+        <BrandLockup subtitle="Maritime Security Operations" />
       </div>
 
       <select

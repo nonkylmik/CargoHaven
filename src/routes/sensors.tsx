@@ -10,13 +10,13 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/sensors")({
   head: () => ({
     meta: [
-      { title: "Sensor Monitoring — SeaShield" },
+      { title: "Sensor Monitoring — CargoHaven" },
       {
         name: "description",
         content:
-          "Simulated vessel sensor monitoring in SeaShield: fire, smoke, temperature, water, motion, door and bilge sensors with alarm and uptime status.",
+          "Simulated vessel sensor monitoring in CargoHaven: fire, smoke, temperature, water, motion, door and bilge sensors with alarm and uptime status.",
       },
-      { property: "og:title", content: "Sensor Monitoring — SeaShield" },
+      { property: "og:title", content: "Sensor Monitoring — CargoHaven" },
       {
         property: "og:description",
         content: "Fire, smoke, temperature, water, motion, door and bilge telemetry (simulated).",

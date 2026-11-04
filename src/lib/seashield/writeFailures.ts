@@ -4,7 +4,7 @@ export class ApiRequestError extends Error {
   readonly detail: string | null;
 
   constructor(status: number, detail: string | null) {
-    super(detail ?? `SeaShield API request failed (${status})`);
+    super(detail ?? `CargoHaven API request failed (${status})`);
     this.name = "ApiRequestError";
     this.status = status;
     this.detail = detail;

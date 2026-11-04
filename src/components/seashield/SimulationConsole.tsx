@@ -202,7 +202,7 @@ export function SimulationConsole({ className }: { className?: string }) {
         open={startKey !== null}
         onClose={() => setStartKey(null)}
         title={plan?.replaces ? "Replace the active scenario?" : "Start a simulated scenario?"}
-        description="Starts the scripted scenario in the SeaShield simulation and runs its first step now. No real vessel or onboard system is affected."
+        description="Starts the scripted scenario in the CargoHaven simulation and runs its first step now. No real vessel or onboard system is affected."
         confirmLabel={plan?.replaces ? "Replace and start" : "Start scenario"}
         destructive={Boolean(plan?.replaces)}
         // The plan shown is the one confirmed; nothing is confirmed while it cannot be shown accurately.

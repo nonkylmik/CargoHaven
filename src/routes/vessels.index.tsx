@@ -17,13 +17,13 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/vessels/")({
   head: () => ({
     meta: [
-      { title: "Vessels — SeaShield Security Console" },
+      { title: "Vessels — CargoHaven Security Console" },
       {
         name: "description",
         content:
-          "Select a vessel to inspect its physical security, CCTV, access control, sensors, cyber and navigation posture in SeaShield (simulated prototype).",
+          "Select a vessel to inspect its physical security, CCTV, access control, sensors, cyber and navigation posture in CargoHaven (simulated prototype).",
       },
-      { property: "og:title", content: "Vessels — SeaShield Security Console" },
+      { property: "og:title", content: "Vessels — CargoHaven Security Console" },
       {
         property: "og:description",
         content: "Per-vessel security breakdown across physical, cyber and navigation systems.",

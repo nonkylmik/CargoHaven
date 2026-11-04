@@ -204,6 +204,20 @@ test("the privacy page is a marked draft that names what is still missing", () =
   }
 });
 
+test("every page is branded CargoHaven and never shows a former name", () => {
+  // SeaShield is the former name; Marisentry was a working name dropped before release.
+  const formerName = /sea\s*shield|marisentry/i;
+  for (const page of PAGES) {
+    const html = read(page);
+    assert.match(html.match(/<title>([^<]*)<\/title>/)[1], /CargoHaven/, `${page} title`);
+    assert.match(html.match(/<a class="brand"[\s\S]*?<\/a>/)[0], /CargoHaven/, `${page} brand`);
+    // Covers visible text, alt text and metadata alike.
+    assert.doesNotMatch(html, formerName, page);
+  }
+  assert.doesNotMatch(read("favicon.svg"), formerName);
+  assert.match(index, /<title>CargoHaven — Maritime Security Operations, Unified<\/title>/);
+});
+
 /** WCAG 2 contrast ratio between two hex colours. */
 function contrast(a, b) {
   const lum = (hex) => {

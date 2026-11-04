@@ -25,7 +25,7 @@ import { Metric, PageHeader, Panel } from "@/components/seashield/primitives";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/safety-rounds")({
-  head: () => ({ meta: [{ title: "Safety Rounds — SeaShield" }] }),
+  head: () => ({ meta: [{ title: "Safety Rounds — CargoHaven" }] }),
   component: SafetyRoundsPage,
 });
 

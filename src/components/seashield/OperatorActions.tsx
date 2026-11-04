@@ -71,7 +71,7 @@ export function SimulatedInjection({ vesselId: selectedVesselId }: { vesselId: s
         <span className="rounded-sm border border-caution/50 px-1 text-caution">Simulation</span>
       </h3>
       <p className="mb-2 text-xs text-muted-foreground">
-        Adds a simulated event to the SeaShield simulation for this vessel. No real vessel, sensor
+        Adds a simulated event to the CargoHaven simulation for this vessel. No real vessel, sensor
         or onboard system is contacted.
       </p>
       {target.kind === "unavailable" ? (
@@ -123,7 +123,7 @@ export function SimulatedInjection({ vesselId: selectedVesselId }: { vesselId: s
           <AlertDialogHeader>
             <AlertDialogTitle>Inject a simulated event?</AlertDialogTitle>
             <AlertDialogDescription>
-              This adds a simulated event to the SeaShield simulation. No real vessel or onboard
+              This adds a simulated event to the CargoHaven simulation. No real vessel or onboard
               system is affected.
             </AlertDialogDescription>
           </AlertDialogHeader>

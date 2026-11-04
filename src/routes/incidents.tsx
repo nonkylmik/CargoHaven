@@ -13,13 +13,13 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/incidents")({
   head: () => ({
     meta: [
-      { title: "Incident Management — SeaShield" },
+      { title: "Incident Management — CargoHaven" },
       {
         name: "description",
         content:
-          "SeaShield incident queue: create incidents, set severity and status, review timelines, related events, affected systems and investigation notes (simulated).",
+          "CargoHaven incident queue: create incidents, set severity and status, review timelines, related events, affected systems and investigation notes (simulated).",
       },
-      { property: "og:title", content: "Incident Management — SeaShield" },
+      { property: "og:title", content: "Incident Management — CargoHaven" },
       {
         property: "og:description",
         content:

@@ -1,7 +1,7 @@
-# SeaShield marketing site
+# CargoHaven marketing site
 
-A standalone landing page for SeaShield, to recruit maritime organisations for prototype demonstrations
-and early-access testing. It is separate from the SeaShield application: it shares no code, build,
+A standalone landing page for CargoHaven, to recruit maritime organisations for prototype demonstrations
+and early-access testing. It is separate from the CargoHaven application: it shares no code, build,
 dependencies or runtime with it, and nothing outside this directory depends on it.
 
 - **Stack:** static HTML, CSS and vanilla JavaScript ES modules. No framework, no dependencies, no build step.
@@ -32,7 +32,7 @@ The root type-check, build and app tests do not include this directory.
 | `main.js`           | Mobile navigation and form wiring                                                          |
 | `form.js`           | Form validation and submission logic (no DOM; tested directly)                             |
 | `config.js`         | `FORM_ENDPOINT`: `null` means the form is not connected                                    |
-| `favicon.svg`       | Text-mark icon                                                                             |
+| `favicon.svg`       | CargoHaven harbour mark, identical to the app's `public/favicon.svg`                       |
 | `assets/fonts/`     | IBM Plex Sans and Mono, copied unchanged from `src/assets/fonts/` (SIL OFL 1.1, `OFL.txt`) |
 | `assets/screens/`   | Product screenshots (see below)                                                            |
 | `scripts/serve.mjs` | Dependency-free local preview server                                                       |
@@ -58,8 +58,9 @@ To connect it later, after a destination has been approved:
 
 ## Product screenshots
 
-The images in `assets/screens/` are genuine captures of the SeaShield prototype, taken on 2026-10-28
-from the app at `/map` with headless Chrome:
+The images in `assets/screens/` are genuine captures of the CargoHaven prototype from the app at `/map`
+with headless Chrome. The map images were retaken on 2026-11-04 after the rename from SeaShield, so the
+app header shows the new name; the context panel, which shows no product name, is from 2026-10-28:
 
 - `map-1600.webp`, `map-800.webp`: the tactical map with a vessel selected (1600×1000 and 800×500).
 - `context-panel.webp`: the selected-vessel context panel (335×528 CSS pixels at 2×).

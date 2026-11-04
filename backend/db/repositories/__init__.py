@@ -1,1 +1,1 @@
-"""Persistence repositories for SeaShield V1.7."""
+"""Persistence repositories for CargoHaven (introduced in V1.7)."""
