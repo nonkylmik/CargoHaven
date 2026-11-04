@@ -6,6 +6,11 @@ import secrets
 import time
 from dataclasses import dataclass
 
+from root_env import load_root_env
+
+# The settings below are read once, at import; app.main imports this module before db.database.
+load_root_env()
+
 SESSION_COOKIE = "seashield_session"
 SESSION_TTL_SECONDS = 8 * 60 * 60
 DEFAULT_SESSION_SECRET = "change-me-in-development"
